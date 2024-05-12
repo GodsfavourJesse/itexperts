@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>ITEXPERTS.</h2>
+            </div>
+        </div>
+        <div class="main_content">
+            <nav>
+                <div class="search_box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="" id="" placeholder="Search....">
+                </div>
+                <div class="userInfo">
+                    <p>Jesse</p>
+                    <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                        <img src="/img/5.png" alt="">
+                    </div>
+                </div>
+            </nav>
+            <div class="settings_menu" id="dropNav">
+                <div class="profile">
+                    <div class="nav-user-icon online">
+                        <img src="/img/5.png" alt="">
+                    </div>
+                    <p>Jesse Golf</p>
+                </div>
+                <div class="other_links">
+                    <a href=""><i class="fa-solid fa-user"></i>My Profile</a>
+                    <a href="/dashboard/account_settings.html"><i class="fa-solid fa-gear"></i>Settings</a>
+                    <a href=""><i class="fa-regular fa-credit-card"></i>Billing</a>
+                    <span>4</span>
+                </div>
+                <div class="log_out">
+                    <a href="/registration/sign_in.html"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+                </div>
+            </div>
+            <div class="intro">
+                <h4>Account Settings / <span>Account</span></h4>
+            </div>
+
+            <div class="menuList">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-user"></i>Account</a></li>
+                    <li><a href=""><i class="fa-solid fa-bell"></i>Notifications</a></li>
+                    <li><a href=""><i class="fa-solid fa-user"></i>connections</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="profile_details">
+                    <h4>Profile Details</h4>
+                    <div class="profile_settings">
+                        <img src="/img/5.png" alt="" id="profile_pic">
+                        <div class="profile_settings_form">
+                            <form action="">
+                                <div class="upload">
+                                    <label for="input_field">Upload new photo</label>
+                                    <input type="file" name="file" id="input_field" acccept="image/jpeg, image/png, image/jpg">
+                                </div>
+                                <div class="reset_upload">
+                                    <input type="reset" value="Reset" id="reset_input">
+                                </div>
+                            </form>
+                            <p>Allowed JPG, GIF or PNG. Max size of 800K</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="personal_info">
+                    <form action="">
+                        <div class="information">
+                            <label for="">first name</label>
+                            <input type="text" placeholder="Godsfavour" required>
+                        </div>
+                        <div class="information">
+                            <label for="">last name</label>
+                            <input type="text" placeholder="Jesse" required>
+                        </div>
+                        <div class="information">
+                            <label for="">e-mail</label>
+                            <input type="email" placeholder="godsfavourjesse@example.com" required>
+                        </div>
+                        <div class="information">
+                            <label for="">organization</label>
+                            <input type="text" placeholder="SchemaWorld Design" required>
+                        </div>
+                        <div class="information">
+                            <label for="">phone number</label>
+                            <input type="tel" placeholder="NIG (+234) 7063161330" required>
+                        </div>
+                        <div class="information">
+                            <label for="">address</label>
+                            <input type="text" placeholder="address" required>
+                        </div>
+                        <div class="information">
+                            <label for="">state</label>
+                            <input type="text" placeholder="Port Harcourt" required>
+                        </div>
+                        <div class="information">
+                            <label for="">zip code</label>
+                            <input type="text" placeholder="231465" required>
+                        </div>
+                        <div class="information">
+                            <label for="">country</label>
+                            <select name="" id="" required>
+                                <option value="Australia">Select</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Australia">Australia</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <label for="">language</label>
+                            <select name="" id="">
+                                <option value="">English</option>
+                                <option value="">French</option>
+                                <option value="">Spanish</option>
+                                <option value="">Portuguese</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <label for="">timezone</label>
+                            <select name="" id="" required>
+                                <option value="">Select Timezone</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                                <option value="">(GMT-12:00) International Daylight</option>
+                            </select>
+                        </div>
+                        <div class="information">
+                            <label for="">currency</label>
+                            <select name="" id="" required>
+                                <option value="">Select Currency</option>
+                                <option value="">USD</option>
+                                <option value="">Euro</option>
+                                <option value="">Pounds</option>
+                                <option value="">Pounds</option>
+                                <option value="">Bitcoin</option>
+                                <option value="">Naira</option>
+                            </select>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save changes">
+                            <input type="reset" value="Cancel">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="deactivate">
+                <h4>Delete Account</h4>
+                <div class="mark">
+                    <p>Are you sure you want to delete your account?</p>
+                    <p>Once you delete your account, there is no going back. Please be certain</p>
+                </div>
+                <form action="">
+                    <div class="checked">
+                        <input type="checkbox" name="" id="">
+                        <span>I confirm my account deactivate</span>
+                    </div>
+                    <button type="submit"><a href="/html/index.html">Deactivate Account</a></button>
+                </form>
+            </div>
+
+            <footer>
+                <div class="copyright">
+                    <span>&copy; 2024, made by <a href="mailto: schemaworldesign@gmail.com">SchemaWorld Design</a></span>
+                </div>
+                <div class="copyright_links">
+                    <a href="">License</a>
+                    <a href="">More Themes</a>
+                    <a href="">Documentation</a>
+                    <a href="">Support</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

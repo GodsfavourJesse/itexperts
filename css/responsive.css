@@ -1,0 +1,27 @@
+ 
+:root{
+    --color-primary: #b41eb9;
+    --color-white: #f1f1f1;
+    --bg-color: #2b2a29;    
+    --pure-white: #fff;
+    --light: #F0FBFC;
+    --hover-color: #3b043b;
+    --course-color: #fae1fa;
+}
+
+@media only screen and (max-width: 700px) {
+    #regisNav{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .c_t_a h3{
+        text-align: center;
+    }
+
+} 

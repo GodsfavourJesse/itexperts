@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITEXPERTS | SIGN IN</title>
+    <link rel="stylesheet" href="/css/registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+
+    <div class="signInCont">
+        <div class="sign_in">
+           <h3>Welcome back!</h3>
+           <p>Make the best out of yourself by learning!</p>
+           <form action="" method="get">
+               <div class="username">
+                <label for="">email</label>
+                <input type="email" placeholder="Enter your email" spellcheck="false" id="emailField"   onkeyup="validateEmail()">
+                <span id="emailError"></span>
+            </div>
+            <div class="username">
+                <div class="label">
+                    <label for="">password</label>
+                    <a href="/registration/password_reset.html">Forgot Password?</a>
+                </div>
+                <input type="password" id="password" placeholder="Enter your password">
+                <img src="/images/eye-close.png" alt="" id="eyeicon">
+                <span id="message">Password is <p id="strenght"></p></span>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <span>Remember me</span>
+            </div>
+            <div class="submit">
+                <button type="submit"><a href="/dashboard/dashboard.html">Sign in</a></button>
+            </div>
+        </form>
+        <span id="bottom_button">New to our platform? <a href="/registration/sign_up.html">Create an account</a></span>
+    </div>
+    </div>
+
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
