@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-EXPERTS | SIGN UP</title>
+    <link rel="stylesheet" href="/home/css/registration.css">
+    <link rel="stylesheet" href="/home/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="sign_up">
+            <div class="logo">
+                <h2>ITEXPERTS.</h2>
+            </div>
+            <div class="heading">
+                <h3>learning adventure starts here</h3>
+                <p>Make the best out of yourself by learning!</p>
+            </div>
+            <form id="form">
+                <div class="username">
+                    <label for="">username</label>
+                    <input type="text" placeholder="Enter your username">
+                </div>
+                <div class="username">
+                    <label for="">email</label>
+                    <input type="email" placeholder="Enter your email" spellcheck="false" id="emailField" onkeyup="validateEmail()">
+                    <span id="emailError"></span>
+                </div>
+                <div class="username">
+                    <label for="">password</label>
+                    <input type="password" id="password">
+                    <img src="/images/eye-close.png" alt="" id="eyeicon">
+                    <span id="message">Password is <p id="strenght"></p></span>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>I agree to <a href="">privacy policy & terms</a></span>
+                </div>
+                <div class="submit">
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+            <span>Already have an account? <a href="/home/registration/sign_in.html">Sign in instead</a></span>
+        </div>
+    </div>
+    <div id="loading-bar" class="hidden">
+        <div id="rotate"></div>
+        <p id="loading-msg">Please wait while we redirect you!</p>
+    </div>
+    
+
+    <script src="/home/js/script.js"></script>
+</body>
+</html>

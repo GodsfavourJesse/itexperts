@@ -1,0 +1,166 @@
+ 
+:root{
+    --color-primary: #b41eb9;
+    --color-white: #f1f1f1;
+    --bg-color: #2b2a29;    
+    --pure-white: #fff;
+    --light: #F0FBFC;
+    --hover-color: #3b043b;
+    --course-color: #fae1fa;
+}
+
+@media only screen and (max-width: 700px) {
+    /* #regisNav{
+        width: 100%;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .c_t_a h3{
+        text-align: center;
+    } */
+    /* .menuBar{
+        display: grid;
+    }  */
+    .header_section{
+        padding: 0 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+     }
+    .header_section #menuIcon{
+        display: flex;
+    }
+    .header_section nav{
+        display: none;
+    }
+    .tablets{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: fit-content;
+        width: 100%;
+        padding: 20px;
+    }
+    .tablets .tabs{
+        width: 300px;
+    }
+    .news{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+    }
+    .news img{
+        width: 100%;
+        height: 500px;
+    }
+    .categories{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        padding: 50px 0;
+    }
+    .categories .title{
+        height: 150px;
+    }
+    .categories .courses{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+    }
+    .categories .courses .courses2{
+        width: 100%;
+    }
+    .popular_courses, .instructors{
+        height: fit-content;
+        gap: 20px;
+        margin-bottom: 2em;
+    }
+    .popular_courses .container, .instructors .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .popular_courses .container .clip, .popular_courses .container .clip img{
+        width: 300px;
+    }
+    .popular_courses .container .clip .details h4{
+        font-size: 18px;
+    }
+    .popular_courses .container .clip .details h5{
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+        font-size: 18px;
+    }
+    .popular_courses .container .clip .details span p{
+        width: 100px;
+        font-size: 12px;
+    }
+    .footer_section .column1{
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        gap: 40px;
+    }
+    .footer_section .column1 .quick_link,
+    .footer_section .column1 .gallery{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 20px;
+        text-align: left;
+    }
+    .footer_section .column1 .contact,
+    .footer_section .column1 .news_letter{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+        gap: 10px;
+        text-align: right;
+    }
+    .footer_section .column1 .news_letter,
+    .footer_section .column1 .news_letter .email_box,
+    .footer_section .column1 .news_letter .email_box input:nth-child(1){
+        width: 100%;
+    }
+    .footer_section .column2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+    }
+   .footer_section .column2 .left_row span{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-align: center;
+   }
+
+   /* register-css-media-query-settings */
+
+   .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 30px;
+   }
+} 

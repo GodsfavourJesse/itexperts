@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITEXPERTS | SIGN IN</title>
+    <link rel="stylesheet" href="/home/css/registration.css">
+    <link rel="stylesheet" href="/home/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+
+    <div class="signInCont">
+        <div class="sign_in">
+           <h3>Welcome back!</h3>
+           <p>Make the best out of yourself by learning!</p>
+
+           <form action="" method="get" id="login-form">
+               <div class="username">
+                    <label for="">email</label>
+                    <input type="email" placeholder="Enter your email" spellcheck="false" id="login-email">
+                </div>
+                <div class="username">
+                    <div class="label">
+                    <label for="">password</label>
+                    <a href="/registration/password_reset.html">Forgot Password?</a>
+                    </div>
+                    <input type="password" id="login-password" placeholder="Enter your password">
+                    <img src="/images/eye-close.png" alt="" id="eyeicon">
+                    <!-- <span id="message">Password is <p id="strenght"></p></span> -->
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </div>
+                <div class="submit">
+                    <button type="submit" id="login-btn">Sign In</button>
+                </div>
+            </form>
+
+            <div id="captcha-container">
+                <h3>please complete the captcha:</h3>
+                <canvas id="captcha" width="200" height="50"></canvas>
+                <input type="text" id="captcha-input" placeholder="Enter captcha" required>
+                <button type="button" id="captcha-btn">Verify</button>
+                <button type="button" id="refresh-btn"><i class="fa-solid fa-rotate"></i></button>
+            </div>
+
+            <div id="loader">
+                <div id="loading-bar-length"></div>
+            </div>
+
+            <span id="bottom_button">New to our platform? <a href="/home/registration/sign_up.html">Create an account</a></span>
+        </div>
+    </div>
+
+
+    <!-- <script src="/home/js/script.js"></script> -->
+    <script src="/home/js/sign_in.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+    /* font-family: sans-serif; */
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primary: #b41eb9;
+    --color-white: #f1f1f1;
+    --bg-color: #2b2a29;    
+    --pure-white: #fff;
+    --light: #F0FBFC;
+    --hover-color: #3b043b;
+    --course-color: #fae1fa;
+}
+
+body{
+    background: var(--color-white);
+}
+
+.blur{
+    filter: blur(5px);
+}
+#captcha{
+    border: 1px solid #000;
+}
+#captcha-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(25px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#captcha-container h3{
+    /* font-size: 20px; */
+    text-transform: capitalize;
+}
+#captcha-container input{
+    outline: none;
+    width: 200px;
+    height: 2.5em;
+    padding-left: 10px;
+    color: #000;
+}
+#captcha-btn{
+    width: 150px;
+    height: 2.5em;
+    background: var(--color-primary);
+    border: 0;
+    color: var(--color-white);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#refresh-btn{
+    position: absolute;
+    top: 43%;
+    right: 27%;
+    background: none;
+    display: none;
+    border: 0;
+    color: var(--color-primary);
+    border-radius: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+nav{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-primary);
+    padding: 0 5%;
+    box-shadow: 0 0 30px var(--pure-white);
+}
+nav h2{
+    font-size: 23px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--pure-white);
+}
+nav .useful_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 135px;
+}
+nav .useful_links a{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: transparent;
+    color: #ccc;
+    transition: all .5s ease;
+    cursor: pointer;
+    font-size: 20px;
+}
+nav .useful_links a:hover{
+    border-color: var(--hover-color);
+    color: var(--hover-color);
+}
+.useful_links select{
+    border: 0;
+    padding: 5px;
+    color: var(--color-white);
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+}
+select:focus{
+    border: 1px solid var(--pure-white);
+    border-radius: 5px;
+}
+.useful_links select option{
+    font-size: 12px;
+    color: var(--bg-color);
+    cursor: pointer;
+    border: 0;
+}
+.welcome_msg{
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+}
+.welcome_msg h3{
+    letter-spacing: 1px;
+    font-size: 25px;
+    line-height: 50px;
+}
+.welcome_msg h3 span{
+    font-size: 25px;
+    font-style: italic;
+    color: var(--color-primary);
+}
+.welcome_msg p{
+    font-size: 12px;
+    color: #2b2a29;
+}
+.content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 9%;
+    gap: 50px;
+}
+.content img{
+    width: 400px;
+}
+.content .c_t_a,
+.content .msg{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.content .c_t_a{
+    justify-content: center;
+}
+.c_t_a h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.c_t_a a{
+    width: 100%;
+    height: 2rem;
+    padding-right: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: end;
+    text-align: right;
+    border: 0;
+    cursor: pointer;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 10px;
+    transition: background .5s ease;
+}
+.c_t_a a i{
+    margin-left: 5px;
+}
+.c_t_a a:focus,
+.c_t_a a:hover{
+    background: var(--hover-color);
+}
+.content .msg{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content .msg .row1{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 100px;
+    background: var(--pure-white);
+    color: #566a7f;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 30px var(--pure-white);
+    transition: background .5s ease, color .5s ease;
+    cursor: pointer;
+}
+.content .msg .row1:hover,
+.content .msg .row1 h4:hover{
+    background: var(--color-primary);
+    color: var(--pure-white);
+}
+.content .msg img{
+    width: 120px;
+}
+.msg .row1 .txt h5{
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 30px;
+}
+.row1 .txt span{
+    font-size: 12px;
+    color: var(--color-primary);
+}
+.row1 .txt span i:nth-child(1){
+    color: var(--hover-color);
+}
+.msg .row1 .txt p{
+    font-size: 12px;
+}
+#loader{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    backdrop-filter: blur(3px);
+}
+#loading-bar-length{
+    width: 100%;
+    height: 4px;
+    background: var(--pure-white);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    backdrop-filter: blur(25px);
+    animation: loading 15s linear forwards;
+}
+@keyframes loading {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+#loading-bar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(25px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--color-primary);
+}
+#rotate{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--color-white);
+    border-top: 16px solid var(--color-primary);
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.signInCont{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/anime.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.signInCont .sign_in{
+    width: 350px;
+    height: 400px;
+    background: var(--pure-white);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sign_in h3{
+    font-size: 23px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.sign_in p{
+    font-size: 13px;
+}
+.sign_in form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30px;
+}
+.sign_in form .username:nth-child(2),
+.sign_in form .username:nth-child(1){
+    position: relative;
+}
+.sign_in form .username:nth-child(1){
+    height: 83px;
+}
+.sign_in .username:nth-child(2) img{
+    position: absolute;
+    width: 15px;
+    right: 30px;
+    bottom: 36px;
+    cursor: pointer;
+}
+.sign_in form .username .label{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+
+}
+.sign_in .label a{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 11px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+.sign_in .username:nth-child(2) span{
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+.sign_in #emailError{
+    position: absolute;
+    bottom: 5px;
+    font-size: 10px;
+    color: var(--hover-color);
+    transition: bottom .5s ease;
+    left: 20px;
+}
+.sign_in form label{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.sign_in .username input{
+    width: 310px;
+    margin: 0 20px;
+}
+.sign_in form .checkbox{
+    text-align: left;
+    padding: 0 20px;
+    height: 34px;
+    position: relative;
+}
+.sign_in form .checkbox span{
+    font-size: 10px;
+    position: absolute;
+    top: -28px;
+}
+.sign_in .submit button{
+    width: 310px;
+    margin: 0 20px;
+    height: 2.5rem;
+    font-size: 14px;
+}
+.sign_in span{
+    font-size: 12px;
+}
+#bottom_button{
+    margin-top: 20px;
+}
+
+.container{
+    width: 100%;
+    height: 642px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px 50px;
+    background-image: url(/images/anime.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sign_up{
+    width: 400px;
+    height: 500px;
+    background: var(--pure-white);
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(122, 119, 119, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.logo{
+    width: 352px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.logo h2{
+    font-size: 25px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+.heading{
+    width: 352px;
+    height: 24px;
+    margin-bottom: 20px;
+}
+.heading h3{
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #566a7f;
+    line-height: 20px;
+}
+.heading p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #697a8d;
+}
+form .username:nth-child(1){
+    margin-top: 10px;
+}
+form .username{
+    display: flex;
+    flex-direction: column;
+    width: 352px;
+    height: 70px;
+}
+.username label{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+.username input{
+    height: 2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0px 12px;
+    outline: none;
+    color: #566a7f;
+}
+input[type=text]:focus,
+input[type=email]:focus{
+    border: 1px solid var(--color-primary);
+}
+.username input::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 10px;
+    color: #ccc;
+}
+form .username:nth-child(2),
+form .username:nth-child(3){
+    position: relative;
+    height: 80px;
+}
+#emailError{
+    position: absolute;
+    top: 30px;
+    font-size: 10px;
+    color: var(--hover-color);
+    transition: bottom .5s ease;
+}
+form .username:nth-child(3) img{
+    position: absolute;
+    right: 10px;
+    bottom: 37px;
+    cursor: pointer;
+    width: 15px;
+}
+#message{
+    position: absolute;
+    bottom: 5px;
+    color: var(--hover-color);
+    font-size: 10px;
+    display: none;
+}
+#strenght{
+    padding-left: 3px;
+    font-size: 10px;
+}
+form .checkbox{
+    width: 352px;
+    height: 34px;
+    text-align: left;
+}
+form .checkbox span{
+    margin-left: 5px;
+    font-size: 12px;
+}
+form .checkbox span a{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 12px;
+    transition: color .5s ease;
+}
+form .checkbox span a:hover{
+    color: var(--color-primary);
+}
+input:checked{
+    background: var(--color-primary);
+}
+form .submit{
+    width: 352px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form .submit button{
+    width: 352px;
+    height: 40px;
+    border: 0;
+    background: var(--color-primary);
+    border-radius: 10px;
+    color: var(--pure-white);
+    box-shadow: 0 0 3px var(--color-primary);
+    cursor: pointer;
+}
+form .submit button a{
+    color: var(--pure-white);
+    text-decoration: none;
+    font-size: 15px;
+}
+span{
+    margin-top: 30px;
+    font-size: 12px;
+}
+span a{
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: color .5s ease;
+}
+span a:hover{
+    color: var(--hover-color);
+}
+
+
+.authentication{
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/images/anime2-removebg-preview.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.authentication .password_reset{
+    width: 350px;
+    height: 400px;
+    background: var(--pure-white);
+    border-radius: 10px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.password_reset .logo{
+    width: 100%;
+}
+.authentication .password_reset h3{
+    margin: 20px 0 0;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.authentication .password_reset p{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.password_reset .username input{
+    width: 300px;
+}
+.password_reset .submit{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.password_reset button{
+    width: 300px;
+    height: 2rem;
+    border: 0;
+    border-radius: 10px;
+    background: var(--color-primary);
+}
+.password_reset button a{
+    color: var(--pure-white);
+    text-decoration: none;
+    font-size: 12px;
+}
+.password_reset a{
+    text-decoration: none;
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.password_reset a i{
+    font-size: 12px;
+    margin-right: 3px;
+}

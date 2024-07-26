@@ -1,0 +1,114 @@
+
+:root{
+    --primary-color: #ff5722;
+    --darker: #ec744f;
+    --secondary-color: #2196f3;
+    --accent-color: #ffc107;
+    --text-color: #212121;
+    --secondary-text-color: #757575;
+    --primary-bg: #ffffff;
+    ---secondary-bg: #f5f5f5;
+    --accent-bg: #eeeeee;
+    --main-bg: #b41eb9;
+    --gradient-start: #212121;
+    --gradient-end: #424242;
+    --hover-color: #3b043b;
+}
+[data-theme='dark']{
+    --primary-color: #ff5722;
+    --secondary-color: #2196f3;
+    --accent-color: #ffc107;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #bdbdbd;
+    --primary-bg: #212121;
+    --secondary-bg: #424242;
+    --accent-bg: #616161;
+    --gradient-start: #212121;
+    --gradient-end: #424242;
+}
+
+@media only screen and (max-width: 700px) {
+    .hero_section{
+        width: 100%;
+        height: 600px;
+    }
+    .hero_section .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .hero_section nav{
+        display: none;
+    }
+    #theme-toggle{
+        position: absolute;
+        right: 50px;
+        width: 40px;
+        height:40px;
+        top: 20px;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary-bg);
+        transition: background .5s ease;
+    }
+    #menuIcon{
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        font-size: 30px;
+        display: flex;
+    }
+    .hero_section .container{
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        align-items: center;
+        justify-content: center;
+        padding-left: 4%;
+    }
+    .hero_section .container .image_box{
+        height: 100%;
+    }
+    .hero_section .container .image_box img{
+        display: none;
+    }
+    .hero_section .container .image_box .side_nav{
+        top: 20%;
+    }
+    .hero_section .image_box .btn_box{
+        top: 45%;
+    }
+
+    .popular_courses{
+        height: fit-content;
+        gap: 20px;
+    }
+    .popular_courses .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .popular_courses .container .clip, .popular_courses .container .clip img{
+        width: 300px;
+    }
+    .popular_courses .container .clip .details h4{
+        font-size: 18px;
+    }
+    .popular_courses .container .clip .details h5{
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+        font-size: 18px;
+    }
+    .popular_courses .container .clip .details span p{
+        width: 100px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITEXPERTS | DASHBOARD</title>
+    <link rel="stylesheet" href="/home/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>ITEXPERTS.</h2>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <nav>
+                <div class="search_box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" name="" id="" placeholder="Search....">
+                </div>
+                <div class="userInfo">
+                    <p>Jesse</p>
+                    <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                        <img src="/home/img/5.png" alt="">
+                    </div>
+                </div>
+            </nav>
+            <div class="settings_menu" id="dropNav">
+                <div class="profile">
+                    <div class="nav-user-icon online">
+                        <img src="/home/img/5.png" alt="">
+                    </div>
+                    <p>Jesse Golf</p>
+                </div>
+                <div class="other_links">
+                    <a href=""><i class="fa-solid fa-user"></i>My Profile</a>
+                    <a href="/home/dashboard/account_settings.html"><i class="fa-solid fa-gear"></i>Settings</a>
+                    <a href=""><i class="fa-regular fa-credit-card"></i>Billing</a>
+                    <span>4</span>
+                </div>
+                <div class="log_out">
+                    <a href="/home/registration/register.html"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/home/js/dashboard.js"></script>
+</body>
+</html>
